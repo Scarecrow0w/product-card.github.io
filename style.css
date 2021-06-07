@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  @apply flex py-3 md:pl-5 pl-3 transition-all duration-300 transform shadow-lg cursor-pointer h-72 rounded-xl group hover:scale-105 hover:shadow-xl 
+}
+
+.card img {
+  @apply px-1
+}
+
+.cards-container {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
